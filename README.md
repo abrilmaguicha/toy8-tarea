@@ -1,6 +1,6 @@
 # Arquitectura TOY-8
 
-Nombre y apellido:
+Nombre y apellido: Abril Maguicha
 
 ## Instrucciones
 
@@ -18,20 +18,20 @@ Tienen un emulador de la computadora y el circuito para el Logisim en el [blog](
 1. Considerar el siguiente programa de TOY-8 en lenguaje máquina. Traducir a hexadecimal en la tercer columna y a ensamblador en la cuarta como se muestra en la primera línea. ¿Cuál es el valor de 0xE cuando el programa se detiene? ¿Qué es lo que hace este programa si 0xE es el resultado del mismo?
 
 ```
-0x1:  10101011    #  AB  #  lw B
-0x2:  11101010    #
-0x3:  00101101    #
-0x4:  11001011    #
-0x5:  10101110    #
-0x6:  00101100    #
-0x7:  11001110    #
-0x8:  10100000    #
-0x9:  11100001    #
-0xA:  00000000    #
-0xB:  00000011    #
-0xC:  00000110    #
-0xD:  11111111    #
-0xE:  00000000    #
+0x1:  10101011    # AB # lw B
+0x2:  11101010    # EA # bze A
+0x3:  00101101    # 2D # add D
+0x4:  11001011    # CB # sw B
+0x5:  10101110    # AE # lw E
+0x6:  00101100    # 2C # add C
+0x7:  11001110    # CE # sw E
+0x8:  10100000    # A0 # lw 0
+0x9:  11100001    # E1 # bze 1
+0xA:  00000000    # 00 # halt 0
+0xB:  00000011    # 03 # halt 3
+0xC:  00000110    # 06 # halt 6
+0xD:  11111111    # FF # FF
+0xE:  00000000    # 00 # halt 0
 ```
 
 2. Consideren el siguiente _hexdump_ de la memoria de TOY-8. O sea un volcado de la memoria en hexadecimal. ¿Cuántos programas distintos pueden encontrar? Indicar cuáles bytes interpretan como instrucciones y cuáles como datos.
