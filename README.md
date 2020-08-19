@@ -33,7 +33,8 @@ Tienen un emulador de la computadora y el circuito para el Logisim en el [blog](
 0xD:  11111111    # FF # FF
 0xE:  00000000    # 00 # halt 0
 ```
-
+El valor de 0xE al detenerse el programa es 12.
+```
 2. Consideren el siguiente _hexdump_ de la memoria de TOY-8. O sea un volcado de la memoria en hexadecimal. ¿Cuántos programas distintos pueden encontrar? Indicar cuáles bytes interpretan como instrucciones y cuáles como datos.
 
 ```
@@ -42,7 +43,7 @@ Tienen un emulador de la computadora y el circuito para el Logisim en el [blog](
 0x8   A7 6D 2E C7
 0xc   00 FF 01 00
 ```
-
+Se pueden encontrar 2 programas. 
 3. Para el primer programa del ejercicio anterior. ¿Qué líneas de control se activan para cada instrucción? ¿Cuál es el valor del bus de datos y de instrucciones en cada instrucción? Completen la siguiente tabla, agreguen las filas que sean necesarias.
 
 |Instrucción|Reloj|Control|Data bus|Address Bus|
@@ -56,15 +57,15 @@ Tienen un emulador de la computadora y el circuito para el Logisim en el [blog](
 ```
 0x1:  A0   #  lw 0  #
 0x2:  CE   #  sw E  #  int sum = 0;
-0x3:  AF
-0x4:  E9
-0x5:  2E
-0x6:  CE
-0x7:  A0
-0x8:  E3
-0x9:  AE
-0xA:  CF
-0xB:  00
+0x3:  AF   #  lw F  #  
+0x4:  E9   #  bze 9 #
+0x5:  2E   #  add E #
+0x6:  CE   #  sw E  #
+0x7:  A0   #  lw 0  #
+0x8:  E3   #  bze 3 #
+0x9:  AE   #  lw E  #
+0xA:  CF   #  sw F  #
+0xB:  00   # halt 0 #
 ```
 
 5. Una mejora que le podríamos hacer a esta computadora es duplicar la cantidad de memoria, pasar de 16 bytes a 32 bytes. ¿Cómo lo harían manteniendo la longitud de las instrucciones en 8 bits? ¿Qué partes de la CPU habría que modificar y cómo?
