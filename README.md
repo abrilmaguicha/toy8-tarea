@@ -43,7 +43,7 @@ El valor de 0xE al detenerse el programa es 12. El programa multiplica los valor
 0x8   A7 6D 2E C7
 0xc   00 FF 01 00
 ```
-Se pueden encontrar 2 programas. 
+Se pueden encontrar 2 programas. El primero corresponde a las direcciones 0x1, 0x2, 0x3, 0x4, 0x5, 0x6 y 0x7.Sus instrucciones son 0x1, 0x2, 0x3 y 0x4, y sus datos 0x5, 0x6 y 0x7. El segundo programa va desde las direcciones 0x8, 0x9, 0xA, 0xB, 0xC, 0xD, 0xE y 0xF. Instrucciones en: 0x8, 0x9, 0xA , 0xB y 0xC, y datos en: 0xD, 0xE y 0xF.
 3. Para el primer programa del ejercicio anterior. ¿Qué líneas de control se activan para cada instrucción? ¿Cuál es el valor del bus de datos y de instrucciones en cada instrucción? Completen la siguiente tabla, agreguen las filas que sean necesarias.
 
 |Instrucción|Reloj|Control|Data bus|Address Bus|
