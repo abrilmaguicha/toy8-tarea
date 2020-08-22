@@ -34,7 +34,7 @@ Tienen un emulador de la computadora y el circuito para el Logisim en el [blog](
 0xE:  00000000    # 00 # halt 0
 ```
 El valor de 0xE al detenerse el programa es 12. El programa multiplica los valores que corresponden a las direcciones 0xB y 0xC.
-```
+
 2. Consideren el siguiente _hexdump_ de la memoria de TOY-8. O sea un volcado de la memoria en hexadecimal. ¿Cuántos programas distintos pueden encontrar? Indicar cuáles bytes interpretan como instrucciones y cuáles como datos.
 
 ```
